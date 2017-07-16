@@ -1,0 +1,31 @@
+﻿@model WebTravel.ViewModels.IndexViewModel
+@{
+    ViewBag.Title = "Vacation";
+}
+
+<section class="odd">
+    <h3>@ViewBag.Title</h3>
+    <div id="vacation" class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model.Territories)
+            {
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="card-title">@item.TerritoryDescription</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci iure recusandae, quam, quo doloribus atque asperiores nemo doloremque! Quidem.</p>
+                            <a href="#" class="btn btn-link">More...</a>
+                        </div>
+                        <div class="panel-footer"><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a><span class="like"><strong> 10 </strong></span><a href="#"><span class="glyphicon glyphicon-thumbs-down"></span></a><span class="dislike"><strong> 5</strong></span></div>
+                    </div>
+                </div>
+            }
+            @{Html.RenderPartial("_Paginador", Model);}
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script>
+
+    </script>
+}

@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<section class="par">
+    <div id="contact" class="container-fluid">
+        <h2>@ViewBag.Title.</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <p><strong>Contact us and we'll get back to you within 24 hours</strong></p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Miami, FL</p>
+                <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+17864161192">Phone: +1 786-400-1192</a></p>
+                <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#"> triana@travel.com</a></p>
+            </div>
+            <div class="col-sm-8">
+                @using (Ajax.BeginForm("FormContact", new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "resp",
+                    OnSuccess = "Success"
+                }))
+                {
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="InputEmail" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="Textarea" id="Textarea" rows="3" placeholder="Comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                }
+                <div class="alert alert-info" role="alert" id="resp" style="display:none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script>
+        function Success(respuesta) {
+            $("#resp").css("display", "inline-block");
+            $("#InputEmail").val("");
+            $("#Textarea").val("");
+            Console.Log("Success");
+            Console.Log(respuesta);
+        }
+    </script>
+}

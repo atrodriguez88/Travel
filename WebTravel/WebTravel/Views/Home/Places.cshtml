@@ -1,0 +1,31 @@
+﻿@model WebTravel.ViewModels.IndexViewModel
+@{
+    ViewBag.Title = "Places";
+}
+<section ng-controller="controllerIndex" class="par">
+    <div id="places" class="container-fluid">
+        <h3>@ViewBag.Title</h3>
+        <div class="row" style="margin-bottom:1.0rem">
+            @foreach (var supplier in Model.Suppliers)
+            {
+                <div class="col-sm-4 clearfix" style="margin-bottom:1.0rem;padding-right:0">
+                    <div class="thumbnail">
+                        <img class="img-responsive" ng-src="{{image()}}">
+                        <div class="caption">
+                            <h3>
+                                @Html.ActionLink(supplier.CompanyName, "PlaceDetail", new { id = supplier.SupplierID })
+                            </h3>
+                            <p><strong>@supplier.Address</strong></p>
+                        </div>
+                    </div>
+                </div>
+            }
+            @{Html.RenderPartial("_Paginador", Model);}
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script>
+
+    </script>
+}

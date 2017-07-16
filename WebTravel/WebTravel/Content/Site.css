@@ -1,0 +1,165 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+body{
+    font-family: monospace;
+}
+.par {
+    background-color: #eee;
+}
+
+.odd {
+    background-color: white;
+}
+
+.navbar {
+    background: rgba(1, 1, 1, 0.5);
+}
+
+.title {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+}
+.title:hover{
+    color: darkgray;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: rgba(1, 1, 1, 0.0);
+}
+
+.nav-link {
+    color: white !important;    
+}
+.nav-link:hover {
+    color: darkgray !important;
+}
+
+.item img {
+    width: 100%;
+    height: 100px;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.btn-primary {
+    background-color: red;
+}
+
+#places {
+    background-color: #f6f6f6;
+}
+
+.thumbnail {
+    border-radius: 0;
+}
+
+.caption h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.about {
+    padding-right: 20px;
+    padding-right: 2.0rem;
+    padding-left: 20px;
+    padding-left: 2.0rem;
+    text-align: justify;
+}
+
+.more:hover {
+    text-decoration: none;
+}
+
+form {
+    margin-bottom: 10px;
+    margin-bottom: 1.0rem;
+}
+
+footer {
+    background: rgba(1, 1, 1, 0.5);
+    height: 80px;
+    height: 8.0rem;
+    text-align: center;
+    color: #eee;
+}
+
+.right {
+    margin-top: 30px;
+    margin-top: 3.0rem;
+}
+
+#p2 {
+    display: none;
+}
+
+
+/* Small devices (tables, 768px and up) */
+
+@media screen and (min-width: 768px) {
+    #p2 {
+        display: block;
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media screen and (min-width: 992px) {
+    .carousel-caption h3 {
+        font-size: 36px;
+        font-size: 3.6rem;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+        font-size: 2.0rem;
+    }
+    #p2 {
+        display: block;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+    .carousel-caption h3 {
+        font-size: 40px;
+        font-size: 4.0rem;
+    }
+    .carousel-caption p {
+        font-size: 24px;
+        font-size: 2.4rem;
+    }
+    #p2 {
+        display: block;
+    }
+}

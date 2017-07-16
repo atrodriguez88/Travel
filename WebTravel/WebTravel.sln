@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTravel", "WebTravel\WebTravel.csproj", "{244774EB-B0A6-4642-9CD3-C78F4C5A383E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTravel.Tests", "WebTravel.Tests\WebTravel.Tests.csproj", "{6129BA08-F877-40BD-B1F8-A47AC3E1A491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTravel", "ModelTravel\ModelTravel.csproj", "{864F4C2D-F439-4F9A-822C-E777A0840C73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{244774EB-B0A6-4642-9CD3-C78F4C5A383E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244774EB-B0A6-4642-9CD3-C78F4C5A383E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244774EB-B0A6-4642-9CD3-C78F4C5A383E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244774EB-B0A6-4642-9CD3-C78F4C5A383E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6129BA08-F877-40BD-B1F8-A47AC3E1A491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6129BA08-F877-40BD-B1F8-A47AC3E1A491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6129BA08-F877-40BD-B1F8-A47AC3E1A491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6129BA08-F877-40BD-B1F8-A47AC3E1A491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864F4C2D-F439-4F9A-822C-E777A0840C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864F4C2D-F439-4F9A-822C-E777A0840C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864F4C2D-F439-4F9A-822C-E777A0840C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864F4C2D-F439-4F9A-822C-E777A0840C73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

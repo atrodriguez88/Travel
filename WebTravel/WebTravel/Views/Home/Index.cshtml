@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section class="odd" ng-controller="controllerIndex">
+    <h3></h3>
+    <div id="vacation" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="card-title">{{types[0].name}}</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci iure recusandae, quam, quo doloribus atque asperiores nemo doloremque! Quidem.</p>
+                        <a href="#" class="btn btn-link">More...</a>
+                    </div>
+                    <div class="panel-footer"><a ng-click="Flike(types[0])" href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a><span class="like"><strong> {{types[0].like}} </strong></span><a ng-click="Fdislike(types[0])" href="#"><span class="glyphicon glyphicon-thumbs-down"></span></a><span class="dislike"><strong> {{types[0].dislike}}</strong></span></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="card-title">{{types[1].name}}</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laborum animi nemo dignissimos alias pariatur reprehenderit, obcaecati excepturi illo sint.</p>
+                        <a href="#" class="btn btn-link">More...</a>
+                    </div>
+                    <div class="panel-footer"><a ng-click="Flike(types[1])" href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a><span class="like"><strong> {{types[1].like}} </strong></span><a ng-click="Fdislike(types[1])" href="#"><span class="glyphicon glyphicon-thumbs-down"></span></a><span class="dislike"><strong> {{types[1].dislike}}</strong></span></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="card-title">{{types[2].name}}</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil voluptatibus illum voluptatum atque, voluptates officia architecto molestiae excepturi odio amet.</p>
+                        <a href="#" class="btn btn-link">More...</a>
+                    </div>
+                    <div class="panel-footer"><a ng-click="Flike(types[2])" href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a><span class="like"><strong> {{types[2].like}} </strong></span><a ng-click="Fdislike(types[2])" href="#"><span class="glyphicon glyphicon-thumbs-down"></span></a><span class="dislike"><strong> {{types[2].dislike}}</strong></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script>
+
+    </script>
+}
