@@ -7,4 +7,3 @@ C:\Users\Triana\Source\Repos\Travel\WebTravel\ModelTravel\bin\Debug\EntityFramew
 C:\Users\Triana\Source\Repos\Travel\WebTravel\ModelTravel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Triana\Source\Repos\Travel\WebTravel\ModelTravel\obj\Debug\ModelTravel.dll
 C:\Users\Triana\Source\Repos\Travel\WebTravel\ModelTravel\obj\Debug\ModelTravel.pdb
-C:\Users\Triana\Source\Repos\Travel\WebTravel\ModelTravel\obj\Debug\ModelTravel.csprojResolveAssemblyReference.cache
