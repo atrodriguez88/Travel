@@ -1,0 +1,29 @@
+﻿@section SPAViews {
+    @Html.Partial("_Home")
+}
+@section Scripts{
+    @*@Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/app")*@
+    <script>
+        $(document).ready(function () {
+            var lista = $("#listPlaces");
+            $.ajax({
+                url: 'http://localhost:5390/api/Territories',
+                type: 'GET',
+                contentType: 'application/json',
+                success: function (json) {
+                    console.log("success");
+                    lista.empty();
+                    for (var k = 0; k < json.length; k++) {
+                        lista.append("<li>" + json[k] + "</li>");
+                    }
+                },
+                error: function (er) {
+                    console.log("error");
+                    lista.empty();
+                    lista.append("<li>" + er.status + ': ' + er.statusText + "</li>");
+                }
+            });
+        });
+    </script>
+}
