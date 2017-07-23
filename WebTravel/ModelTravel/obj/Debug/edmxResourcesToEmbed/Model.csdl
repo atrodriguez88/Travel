@@ -334,5 +334,16 @@
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Territories" EntitySet="Territories" />
     </AssociationSet>
+    <EntitySet Name="UnitPrice_DistictEmployee" EntityType="DBTravelModel.UnitPrice_DistictEmployee" />
   </EntityContainer>
+  <EntityType Name="UnitPrice_DistictEmployee">
+    <Key>
+      <PropertyRef Name="UnitPrice" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

@@ -167,5 +167,14 @@
         <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="UnitPrice_DistictEmployee">
+      <EntityTypeMapping TypeName="DBTravelModel.UnitPrice_DistictEmployee">
+        <MappingFragment StoreEntitySet="UnitPrice/DistictEmployee">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

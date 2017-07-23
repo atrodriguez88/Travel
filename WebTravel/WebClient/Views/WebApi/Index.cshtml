@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Cash Flow";
+}
+
+<h1>All Salary...</h1>
+
+<h2 id="h2"></h2>
+<a href="">State</a>
+<input type="button" id="logOut" value="Log Out" />
+<ul id="list"> </ul>
+
+
+<script src="Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $("#h2").text("Hello " + localStorage.getItem('userName'));
+
+        $("#logOut").click(function () {
+            sessionStorage.removeItem('accessToken');
+            window.location.href = "Login.html";
+        });
+
+        $.ajax({
+            method: 'GET',
+            url: 'http://localhost:5390/api/Territories/Unit',
+            headers: {
+                Authorization: "bearer " + sessionStorage.getItem('accessToken')
+            },
+            success: function (response) {
+                console.log("Success");
+                for (var i = 0; i < response.length; i++) {
+                    $("#list").append("<li> First Name: " + response[i].FirstName + " Last Name: " + response[i].LastName + " Unit Price: " + response[i].UnitPrice + "</li><br>");
+                }
+            },
+            error: function (e) {
+                console.log("Error");
+                if (e.status == "401") {
+                    window.location.href = "@Url.Action("Login")";
+                }
+            }
+        })
+    });
+</script>
+
+

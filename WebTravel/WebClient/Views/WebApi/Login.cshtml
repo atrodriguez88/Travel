@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<div class="col-md-11 col-md-offset-1">
+    <div class="well">
+        <!--This table contains the fields that we want to capture to register a new user-->
+        <table class="table table-bordered">
+            <thead>
+                <tr class="success">
+                    <th colspan="2">
+                        User Login
+                        <a class="btn btn-success pull-right" href="@Url.Action("Register")">Register</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" id="txtUsername" placeholder="Username" /> </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" id="txtPassword"
+                               placeholder="Password" />
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td colspan="2">
+                        <input id="btnLogin" class="btn btn-success"
+                               type="button" value="Login" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="success">
+                    <th>Social Login</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="button" id="btnLoginGoogle" class="btn btn-success" value="Login with Google" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Bootstrap alert to display any validation errors-->
+        <div id="divError" class="alert alert-danger collapse">
+            <a id="linkClose" href="#" class="close">&times;</a>
+            <div id="divErrorText"></div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btnLogin").click(function () {
+            $.ajax({
+                url: "http://localhost:5390/token",
+                method: 'POST',
+                contentType: "application/json",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data: {
+                    username: $("#txtUsername").val(),
+                    password: $("#txtPassword").val(),
+                    grant_type: 'password'
+                },
+                success: function (responde) {
+                    console.log("Success");
+                    sessionStorage.setItem('userName', responde.userName);
+                    sessionStorage.setItem('accessToken', responde.access_token);
+
+                    //Test response
+                    //$("#diverror").text(JSON.stringify(response));
+                    window.location.href = "@Url.Action("Index")";
+                },
+                error: function (jqXHR) {
+                    console.log("Error");
+                    $('#divErrorText').text(jqXHR.responseText);
+                    $('#divError').show('fade');
+
+                }
+            });
+        });
+    });
+</script>

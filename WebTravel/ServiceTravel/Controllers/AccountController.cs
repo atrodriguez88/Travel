@@ -16,10 +16,12 @@ using Microsoft.Owin.Security.OAuth;
 using ServiceTravel.Models;
 using ServiceTravel.Providers;
 using ServiceTravel.Results;
+using System.Web.Http.Cors;
 
 namespace ServiceTravel.Controllers
 {
-    [Authorize]
+    [EnableCors("*", "*", "*")]
+    [Authorize]    
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {

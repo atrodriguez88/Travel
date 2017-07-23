@@ -15,17 +15,27 @@ using System.Web.Http.Cors;
 namespace ServiceTravel.Controllers
 {
     [EnableCors("*","*","*")]
+    [Authorize]
+    [RoutePrefix("api/Territories")]
     public class TerritoriesController : ApiController
     {
         private DBTravelEntities db = new DBTravelEntities();
 
         // GET: api/Territories
         //This is a example
+        [Route("")]
+        [AllowAnonymous]
         public List<string> GetTerritories()
         {
             return db.Territories.Select(t =>t.TerritoryDescription).Take(10).ToList();
         }
-
+        
+        [Route("Unit")]
+        [AllowAnonymous]
+        public List<UnitPrice_DistictEmployee> GetUnitPrice()
+        {
+            return db.UnitPrice_DistictEmployee.ToList();
+        }
         // GET: api/Territories/5
         [ResponseType(typeof(Territory))]
         public async Task<IHttpActionResult> GetTerritory(string id)
