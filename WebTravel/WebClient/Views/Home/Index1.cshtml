@@ -1,0 +1,25 @@
+﻿@section SPAViews {
+    @Html.Partial("_Home1")
+}
+@section Scripts{
+<script src="~/Scripts/angular.js"></script>
+    <script>
+        var app = angular.module("myapp", [])
+        .controller("myController", function ($scope, $http, $log) {
+
+        var successCallBack = function (response) {
+            $scope.success = response.data;
+            $log.info(response);
+        };
+        var errorCallBack = function (response) {
+            $scope.error = response.data;
+            $log.info(response);
+        };
+
+        $http({
+            method: "GET",
+            url: "http://localhost:5390/api/Territories"
+        }).then(successCallBack, errorCallBack);
+    });
+    </script>
+}

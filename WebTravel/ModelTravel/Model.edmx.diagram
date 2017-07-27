@@ -27,6 +27,7 @@
         <AssociationConnector Association="DBTravelModel.FK_Territories_Region" ManuallyRouted="false" />
         <AssociationConnector Association="DBTravelModel.CustomerCustomerDemo" ManuallyRouted="false" />
         <AssociationConnector Association="DBTravelModel.EmployeeTerritories" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBTravelModel.UnitPrice_DistictEmployee" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

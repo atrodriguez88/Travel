@@ -21,7 +21,7 @@ namespace WebTravel.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DBTravelEntities", throwIfV1Schema: false)
+            : base("DBTravelUser", throwIfV1Schema: false)
         {
         }
 

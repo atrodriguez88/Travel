@@ -1,0 +1,19 @@
+﻿<div ng-app="myapp">
+    <div class="jumbotron">
+        <h1>Client Web Application</h1>
+        <p class="lead">This Web is about Travel Recomendation</p>
+        <abbr>I use ajax with Angular</abbr>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div ng-controller="myController">
+                <h3>Top 10 Famous Places</h3>
+                <ul id="listPlaces">
+                    <li ng-repeat="place in success">
+                        {{place}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
